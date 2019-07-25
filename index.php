@@ -36,19 +36,9 @@ while (list($name, $unused1, $unused2, $sku, $price) = fgetcsv($handle, 1000))
 fclose($handle);
 
 
-// open the file "demosaved.csv" for writing
-$file = fopen('demosaved.csv', 'w');
-
-// save the column headers
-fputcsv($file, array('SKU', 'Name', 'Key', 'Quantity'));
-
-
-foreach ($names as $row) {
-  fputcsv($file, $row);
+foreach ($names as $key => $value) {
+  echo $skus[$key] . ' / ' . $value . ' / ' . $key . ' / ' . $quantity_data[$key] . "\n";
 }
-
-// Close the file
-fclose($file);
 
 // print_r($skus);
 // print_r($names);
