@@ -1,6 +1,6 @@
 <?php
 
-$handle = fopen("april.csv", "r");
+$handle = fopen("june.csv", "r");
 
 while (list($name, $quantity, $sku) = fgetcsv($handle, 1000))
 {
